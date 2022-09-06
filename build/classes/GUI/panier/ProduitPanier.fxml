@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox fx:id="box_produit" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="206.0" prefWidth="350.0" spacing="5.0" style="-fx-background-radius: 15;" styleClass="shadow" stylesheets="@../../Stylesheets/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.panier.ProduitPanierController">
+   <children>
+      <BorderPane prefHeight="358.0" prefWidth="447.0">
+         <bottom>
+            <VBox prefHeight="41.0" prefWidth="353.0" spacing="5.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fx:id="description_label" strokeType="OUTSIDE" strokeWidth="0.0" text="Text tex &#10;text &#10;" />
+               </children>
+            </VBox>
+         </bottom>
+         <right>
+            <VBox alignment="CENTER" prefHeight="162.0" prefWidth="191.0" spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="nom_p" prefHeight="21.0" prefWidth="162.0" text="Product name" textFill="#293462">
+                     <font>
+                        <Font name="Consolas" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="prix_p" prefHeight="21.0" prefWidth="162.0" text="Price" textFill="#293462">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="panier_button" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#deleteFromPanier" prefHeight="35.0" prefWidth="151.0" style="-fx-background-radius: 50px;" styleClass="round-layout" stylesheets="@../../Stylesheets/Style.css" text="Supprimer" textFill="WHITE">
+                     <font>
+                        <Font name="Berlin Sans FB" size="15.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CART_PLUS" onMouseClicked="#deleteFromPanier" size="2EM" text="" wrappingWidth="27.714284896850586" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </right>
+         <left>
+            <ImageView fx:id="bookImage" fitHeight="194.0" fitWidth="162.0" pickOnBounds="true" preserveRatio="true" styleClass="transparent" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../../images/produit-img1.png" />
+               </image>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </ImageView>
+         </left>
+      </BorderPane>
+   </children>
+</HBox>

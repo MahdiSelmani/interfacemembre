@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="box" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="470.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Tuto_hbController">
+   <children>
+      <MediaView fx:id="video_media" fitHeight="250.0" fitWidth="330.0">
+         <HBox.margin>
+            <Insets bottom="30.0" top="27.0" />
+         </HBox.margin>
+      </MediaView>
+      <VBox alignment="CENTER_LEFT" prefHeight="250.0" prefWidth="142.0" spacing="13.0">
+         <children>
+            <Label fx:id="gameNameLabel" text="call of duty" textFill="#293462">
+               <font>
+                  <Font name="Consolas" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="usernameLabel" text="User name" textFill="#293462">
+               <font>
+                  <Font name="Consolas" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Label>
+            <JFXButton fx:id="play_button" onAction="#playMedia" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #ff0140;" text="Play" textFill="#293462">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="pause_button" onAction="#pauseMedia" prefHeight="28.0" prefWidth="74.0" style="-fx-background-color: #ff0140;" text="Pause" textFill="#293462">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="reset_button" onAction="#resertMedia" prefHeight="28.0" prefWidth="74.0" style="-fx-background-color: #ff0140;" text="Reset" textFill="#293462">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+            </JFXButton>
+            <FontAwesomeIconView fx:id="icon_tuto" glyphName="PLAY" onMouseClicked="#play_tuto" size="2.5em">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </FontAwesomeIconView>
+         </children>
+      </VBox>
+   </children>
+</HBox>
